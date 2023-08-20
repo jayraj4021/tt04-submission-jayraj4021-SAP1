@@ -8,7 +8,7 @@
 `include "./alu.v"
 `include "./output_register.v"
 
-module top(clk, rst);
+module tt_um_jayraj4021_SAP1_cpu(clk, rst);
 
     input clk;
     input rst;
