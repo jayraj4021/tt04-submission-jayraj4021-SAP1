@@ -22,6 +22,10 @@ module tt_um_jayraj4021_SAP1_cpu #( parameter MAX_COUNT = 10_000_000 ) (
     
     wire rst = ! rst_n;
 
+    // using bidirectional as output
+    assign uio_oe = 8'b11111111;
+    assign uio_out = 8'b11111111;
+
     wire Epc, RstPc, Emar, LmPC, LmIRa, readEnableROM, Eir, Eacc, LaccM, LaccA, Eb, subtract, Eo;
     wire [3:0] pcAddressWire;
     wire [3:0] marAddressWire;
