@@ -32,7 +32,7 @@ documentation:
   author:       "Jayraj Desai"      # Your name
   title:        "SAP-1 CPU"      # Project title
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
-  description:  "Implementaion of Simple As Possible (SAP-1) CPU based on the book Digital Computer Electronics by Albert Paul Malvino and Jerald A. Brown"      # Short description of what your project does
+  description:  "Implementaion of Simple As Possible (SAP-1) CPU based on the book Digital Computer Electronics by Albert Paul Malvino and Jerald A. Brown "      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
