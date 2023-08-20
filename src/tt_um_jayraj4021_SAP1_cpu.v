@@ -30,7 +30,7 @@ module tt_um_jayraj4021_SAP1_cpu #( parameter MAX_COUNT = 10_000_000 ) (
     wire [7:0] accOutputWire;
     wire [7:0] bOutputWire;
     wire [7:0] aluOutputWire;
-    wire [7:0] orOutputWire;
+    //wire [7:0] orOutputWire;
 
     control_unit cu(.clk(clk), .rst(rst), .inputInstruction(irOutputWire), .Epc(Epc), .RstPc(RstPc), .Emar(Emar), .LmPC(LmPC), .LmIRa(LmIRa), .readEnableROM(readEnableROM), .Eir(Eir), .Eacc(Eacc), .LaccM(LaccM), .LaccA(LaccA), .Eb(Eb), .subtract(subtract), .Eo(Eo));
     program_counter pc(.clk(clk),.rst(RstPc),.Epc(Epc),.pc_address(pcAddressWire));
@@ -40,6 +40,6 @@ module tt_um_jayraj4021_SAP1_cpu #( parameter MAX_COUNT = 10_000_000 ) (
     accumulator acc(.clk(clk), .Eacc(Eacc), .LaccM(LaccM), .LaccA(LaccA), .inputDataFromMemory(memoryDataWire), .inputDataFromALU(aluOutputWire), .outputDataAcc(accOutputWire));
     b_register breg(.clk(clk), .Eb(Eb), .inputData(memoryDataWire), .outputData(bOutputWire));
     alu alu(.inputA(accOutputWire), .inputB(bOutputWire), .aluOutput(aluOutputWire), .subtract(subtract));
-    output_register oreg(.clk(clk), .Eout(Eo), .inputData(accOutputWire), .outputData(orOutputWire));
+    output_register oreg(.clk(clk), .Eout(Eo), .inputData(accOutputWire), .outputData(uo_out));
 
 endmodule
