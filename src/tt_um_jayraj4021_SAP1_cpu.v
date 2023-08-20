@@ -1,12 +1,12 @@
-`include "./program_counter.v"
-`include "./control_unit.v"
-`include "./mar.v"
-`include "./memory_16x8_rom.v"
-`include "./instruction_register.v"
-`include "./accumulator.v"
-`include "./b_register.v"
-`include "./alu.v"
-`include "./output_register.v"
+//`include "./program_counter.v"
+//`include "./control_unit.v"
+//`include "./mar.v"
+//`include "./memory_16x8_rom.v"
+//`include "./instruction_register.v"
+//`include "./accumulator.v"
+//`include "./b_register.v"
+//`include "./alu.v"
+//`include "./output_register.v"
 
 module tt_um_jayraj4021_SAP1_cpu #( parameter MAX_COUNT = 10_000_000 ) (
     input  wire [7:0] ui_in,    // Dedicated inputs
