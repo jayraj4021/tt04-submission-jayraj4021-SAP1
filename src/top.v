@@ -1,12 +1,12 @@
-`include "../program_counter/program_counter.v"
-`include "../control_unit/control_unit.v"
-`include "../memory_address_register/mar.v"
-`include "../memory_16x8_ROM/memory_16x8_rom.v"
-`include "../instruction_register/instruction_register.v"
-`include "../accumulator/accumulator.v"
-`include "../b_register/b_register.v"
-`include "../alu/alu.v"
-`include "../output_register/output_register.v"
+`include "./program_counter.v"
+`include "./control_unit.v"
+`include "./mar.v"
+`include "./memory_16x8_rom.v"
+`include "./instruction_register.v"
+`include "./accumulator.v"
+`include "./b_register.v"
+`include "./alu.v"
+`include "./output_register.v"
 
 module top(clk, rst);
 
