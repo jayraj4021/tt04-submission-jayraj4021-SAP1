@@ -19,8 +19,8 @@ module tt_um_jayraj4021_SAP1_cpu #( parameter MAX_COUNT = 10_000_000 ) (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    input clk;
-    input rst;
+    
+    wire rst = ! rst_n;
 
     wire Epc, RstPc, Emar, LmPC, LmIRa, readEnableROM, Eir, Eacc, LaccM, LaccA, Eb, subtract, Eo;
     wire [3:0] pcAddressWire;
