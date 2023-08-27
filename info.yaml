@@ -42,46 +42,30 @@ documentation:
       tristate buffers but in CMOS implementation I am not aware of a simple way to infer a tristate buffer in verilog so made some changes to adapt their architecture.
       Another important thing to notice is that eventhough this project has full implementation of LDA, ADD, SUB and OUT instructions, I have not impelemented interface to 
       an external memory, instead I have hard coded a 16 x 8 bit memory in the memory_16x8_rom.v which kind of simulates memory.
-      Hence this CPU can run only one code 😅.
+      Hence this CPU can run only one code.  
+      This Project needs two input only clk and rst_n. I plan to provide input clock by generating it outside using a 555 timer and using a simple switch to provide rst_n signal.
       
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Explain how to test your project
+      As mentioned in how it works this project needs two inputs clk and rst_n. Once these signals are applied after few clock pulses you should see output of a fixed 
+      code at the output pins which can be viewed using set of 8 LEDs connected serially through resistors.
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - clk - input clock signal
+    - rst_n - active low reset
+
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - dot
+    - 8 bit output showing contest of accumulator after each operation.
+    
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
 
 # The following fields are optional
-  tag:          ""      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
+  tag:          "CPU, microprocessor, SAP-1, Digital Computer Electronics"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
   external_hw:  ""      # Describe any external hardware needed
   discord:      ""      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
