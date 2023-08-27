@@ -38,16 +38,16 @@ module memory_16x8_rom(clk, readEnable, readAddress, dataOut);
     //        mem[i] = i+3;
     //end
     //Initialized the memory as per above code 
-    initial begin
+        initial begin
         mem[0]  = 8'b00001001;
-        mem[1]  = 8'b00011010;
-        mem[2]  = 8'b00011011;
-        mem[3]  = 8'b00101100;
-        mem[4]  = 8'b11101111;
-        mem[5]  = 8'b00001001;
-        mem[6]  = 8'b00011100;
+        mem[1]  = 8'b11101111;
+        mem[2]  = 8'b00011010;
+        mem[3]  = 8'b11101111;
+        mem[4]  = 8'b00011011;
+        mem[5]  = 8'b11101111;
+        mem[6]  = 8'b00101100;
         mem[7]  = 8'b11101111;
-        mem[8]  = 8'b11111111;
+        mem[8]  = 8'b11101111;
         mem[9]  = 8'b00000001;
         mem[10] = 8'b00000010;
         mem[11] = 8'b00000011;
