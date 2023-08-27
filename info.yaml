@@ -63,14 +63,14 @@ documentation:
     - none
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - dot
+    - uo_out[0]
+    - uo_out[1]
+    - uo_out[2]
+    - uo_out[3]
+    - uo_out[4]
+    - uo_out[5]
+    - uo_out[6]
+    - uo_out[7]
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - none
