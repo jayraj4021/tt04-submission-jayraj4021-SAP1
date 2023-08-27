@@ -58,7 +58,7 @@ documentation:
 
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - 8 bit output showing contest of accumulator after each operation.
+    - 8 bit output showing content of accumulator after each operation.
     
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
