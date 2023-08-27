@@ -36,7 +36,14 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      Explain how your project works
+      This project is an implementation of a CPU called SAP-1 as refered in the book 'Digital Computer Electronics' by  Albert Paul Malvino and Jerald A. Brown. 
+      Book's PDF is available online, a simple internet search will point you to the PDF of the book.
+      Difference in my implementation versus the one mentioned in the book is that they have used shared bus architecture, which was possible due to use of TTL
+      tristate buffers but in CMOS implementation I am not aware of a simple way to infer a tristate buffer in verilog so made some changes to adapt their architecture.
+      Another important thing to notice is that eventhough this project has full implementation of LDA, ADD, SUB and OUT instructions, I have not impelemented interface to 
+      an external memory, instead I have hard coded a 16 x 8 bit memory in the memory_16x8_rom.v which kind of simulates memory.
+      Hence this CPU can run only one code 😅.
+      
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
