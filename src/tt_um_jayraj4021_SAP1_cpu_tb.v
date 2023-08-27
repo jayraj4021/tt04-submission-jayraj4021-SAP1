@@ -15,8 +15,8 @@ module tt_um_jayraj4021_SAP1_cpu_tb;
 
     initial begin
 
-        $dumpfile("top_tb.vcd");
-        $dumpvars(0,top_tb);
+        $dumpfile("tt_um_jayraj4021_SAP1_cpu_tb.vcd");
+        $dumpvars(0,tt_um_jayraj4021_SAP1_cpu_tb);
 
         #25
 
