@@ -1,7 +1,7 @@
 `timescale 1ns / 1ns
 `include "tt_um_jayraj4021_SAP1_cpu.v"
 
-module top_tb;
+module tt_um_jayraj4021_SAP1_cpu_tb;
 
     reg clk = 1'b0;
     reg rst = 1'b0;
@@ -11,7 +11,7 @@ module top_tb;
         #10;
     end
 
-    top uut(clk,rst);
+    tt_um_jayraj4021_SAP1_cpu uut(clk,rst);
 
     initial begin
 
