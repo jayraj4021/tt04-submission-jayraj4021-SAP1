@@ -42,14 +42,19 @@ documentation:
       tristate buffers but in CMOS implementation I am not aware of a simple way to infer a tristate buffer in verilog so made some changes to adapt their architecture.
       Another important thing to notice is that eventhough this project has full implementation of LDA, ADD, SUB and OUT instructions, I have not impelemented interface to 
       an external memory, instead I have hard coded a 16 x 8 bit memory in the memory_16x8_rom.v which kind of simulates memory.
-      Hence this CPU can run only one code.  
+      Hence this CPU can run only one code.    
+      
       This Project needs two input only clk and rst_n. I plan to provide input clock by generating it outside using a 555 timer and using a simple switch to provide rst_n signal.
       
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
       As mentioned in how it works this project needs two inputs clk and rst_n. Once these signals are applied after few clock pulses you should see output of a fixed 
-      code at the output pins which can be viewed using set of 8 LEDs connected serially through resistors.
+      code at the output pins which can be viewed using set of 8 LEDs connected serially through resistors.   
+      Expected output is binary 01 (This is output of first instruction that loads accumulator with value 01 which is stored at address 0x9 in memory) , 03
+      (This is output of second instruction which is add accumulator with value 02 which is stored at 0xA address in memory), 06 
+      (This is output of third instruction which is add accumulator with value 03 which is stored at 0xB address in memory) and 02 (This is output of 
+      third instruction which is subtract accumulator with value 04 which is stored at 0xC address in memory).
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
