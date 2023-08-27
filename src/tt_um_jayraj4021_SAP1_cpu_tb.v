@@ -1,5 +1,5 @@
 `timescale 1ns / 1ns
-`include "top.v"
+`include "tt_um_jayraj4021_SAP1_cpu.v"
 
 module top_tb;
 
